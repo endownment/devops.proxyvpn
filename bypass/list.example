@@ -1,0 +1,19 @@
+# Destinations that must bypass the VPN. They are reached directly, through the
+# normal network of the container (from there on the network rules of the host apply).
+# One entry per line, "#" starts a comment. Copy this file to "list" and edit it:
+#   cp bypass/list.example bypass/list
+#
+# An entry is one of:
+#   an IPv4 address       203.0.113.10
+#   an IPv4 network       192.168.0.0/16
+#   a public host name    example.com   (resolved to IPv4 addresses when the script runs)
+
+# local networks
+192.168.0.0/16
+10.0.0.0/8
+
+# address of a local VPN server
+# 203.0.113.10
+
+# a public name
+# example.com

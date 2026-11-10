@@ -5,10 +5,11 @@ services:
     restart: unless-stopped
     volumes:
       - ./wg0-sg.conf:/etc/amnezia/amneziawg/wg0.conf:ro
+      - ./bypass:/bypass:ro
+      - ./bypass/hook.cfg:/etc/amnezia/amneziawg/bypass.conf:ro
     devices:
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - NET_ADMIN
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
-

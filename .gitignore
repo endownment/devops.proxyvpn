@@ -1,1 +1,6 @@
+# VPN configs contain private keys
 *.conf
+.env
+
+# local list of destinations that bypass the VPN (may contain private names)
+bypass/list
